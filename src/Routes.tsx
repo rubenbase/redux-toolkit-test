@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
 import { BrowserRouter, Routes as RouterRoutes, Route } from 'react-router-dom'
 
+import Home from './components/pages/home'
+
 const Routes: FC = () => {
   return (
     <BrowserRouter>
       <RouterRoutes>
-        <Route path="/" element={<div>example</div>}>
-          {/* <Route index element={<Home />} /> */}
-        </Route>
+        <Route path="/" element={<Home />} />
       </RouterRoutes>
     </BrowserRouter>
   )

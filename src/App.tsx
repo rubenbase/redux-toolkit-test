@@ -1,7 +1,8 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { store } from 'app/store'
-import Layout from 'components/Layout'
+
+import Layout from './components/templates/layout'
 import Routes from './Routes'
 
 function App() {

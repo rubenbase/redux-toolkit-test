@@ -20,17 +20,7 @@
     "noEmit": true,
     "jsx": "react",
     "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "paths": {
-      "@assets/*": ["assets/*"],
-      "@components/*": ["components/*"],
-      "@interfaces/*": ["interfaces/*"],
-      "@services/*": ["services/*"],
-      "@utils/*": ["utils/*"],
-      "@constants/*": ["constants/*"],
-      "@pages/*": ["pages/*"],
-      "@mocks/*": ["__mocks__/*"]
-    }
+    "noUnusedParameters": false
   },
   "include": ["src"]
 }
