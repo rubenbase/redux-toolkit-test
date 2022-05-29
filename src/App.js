@@ -1,11 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import { Counter } from './features/counter/Counter'
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-black">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
@@ -52,7 +51,7 @@ function App() {
         </span>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
