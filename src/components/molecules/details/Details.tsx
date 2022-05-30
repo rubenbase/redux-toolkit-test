@@ -38,7 +38,7 @@ const Details: FC<DetailsProps> = ({ details = [], title, linksMetadata = [] }) 
       {Boolean(details.length) && (
         <div className="flex flex-wrap mt-4">
           {details.map((detail) => (
-            <div className="mb-4 text-sm">
+            <div key={detail.name} className="mb-4 text-sm">
               <span className="bg-stone-200 rounded-l-md border px-2 py-2">
                 {detail.name}:
               </span>
@@ -54,12 +54,12 @@ const Details: FC<DetailsProps> = ({ details = [], title, linksMetadata = [] }) 
       {Boolean(linksMetadata.length) && (
         <div className="block mt-10">
           {linksMetadata.map((linkMeta) => (
-            <div className="mb-4">
+            <div key={linkMeta.key} className="mb-4">
               <div className="font-bold mb-2">{linkMeta.name}</div>
               <ul className="space-y-4">
                 {Boolean(linkMeta.urls?.length) ? (
                   linkMeta.urls?.map((url) => (
-                    <li className="block">
+                    <li key={url} className="block">
                       <Link
                         to={`/${linkMeta.baseRoute}/${getRegexNumberFromString(url)}`}
                         className="ml-4 text-sm bg-stone-100 hover:bg-stone-200 px-4 py-2 rounded-lg"
