@@ -22,3 +22,8 @@ export type People = Person[]
 export interface PeopleResponse {
   results: People
 }
+
+export type PersonDetails = Pick<
+  Person,
+  'birth_year' | 'eye_color' | 'gender' | 'hair_color' | 'height' | 'mass' | 'skin_color'
+>

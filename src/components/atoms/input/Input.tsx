@@ -7,19 +7,24 @@ interface InputProps extends InputBaseProps {
   type: string
 }
 
-const Input: FC<InputProps> = ({ label, type = 'text', ...rest }) => {
+const Input: FC<InputProps> = ({
+  label,
+  type = 'text',
+  name,
+  className = '',
+  ...rest
+}) => {
   return (
     <div>
       {label && (
-        <label htmlFor="search" className="block text-sm font-medium text-gray-700">
+        <label htmlFor={name} className="block text-sm font-medium text-gray-700">
           {label}
         </label>
       )}
       <div className="mt-1">
         <input
           type={type}
-          className="w-96 shadow-sm block sm:text-sm border-gray-300 rounded-md"
-          placeholder="you@example.com"
+          className={`w-96 shadow-sm block sm:text-sm border-gray-300 rounded-md ${className}`}
           {...rest}
         />
       </div>

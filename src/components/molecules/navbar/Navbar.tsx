@@ -23,7 +23,7 @@ const Navbar: FC<NavbarProps> = ({ logoUrl, title }) => {
           </div>
           {/* Right Nav */}
           <nav>
-            <Link className="font-bold" to={`${Routes.Person}`}>
+            <Link className="font-bold" to="/favorites">
               Favorites
             </Link>
           </nav>

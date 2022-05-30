@@ -8,6 +8,7 @@ import {
 import { Person } from 'types/people'
 import { FaRegHeart, FaHeart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { getRegexNumberFromString } from 'utils/getRegexNumberFromString'
 
 interface PeopleListItemProps {
   person: Person
@@ -16,10 +17,6 @@ interface PeopleListItemProps {
 const PeopleListItem: FC<PeopleListItemProps> = ({ person }) => {
   const favorites = useSelector(getFavorites)
   const dispatch = useDispatch()
-
-  console.log('favorites', favorites)
-
-  const handleSelect = () => {}
 
   const isFavorited = favorites[person.url]
 
@@ -62,7 +59,7 @@ const PeopleListItem: FC<PeopleListItemProps> = ({ person }) => {
       <td className="border-t border-gray-200 relative py-3.5 pl-3 pr-4 sm:pr-6 text-right text-sm font-medium">
         <Link
           className="text-blue-600 hover:underline"
-          to={`people/${person.url.replace(/\D/g, '')}`}
+          to={`/people/${getRegexNumberFromString(person.url)}`}
         >
           View details
         </Link>

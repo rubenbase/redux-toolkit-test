@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { RootState } from 'app/store'
 import { Person } from 'types/people'
 
 interface FavoritesState {
@@ -22,7 +23,7 @@ export const favoritesSlice = createSlice({
   },
 })
 
-export const getFavorites = (state) => state.favorites.value
+export const getFavorites = (state: RootState) => state.favorites.value
 
 export const { addFavorite, removeFavorite } = favoritesSlice.actions
 export default favoritesSlice.reducer
