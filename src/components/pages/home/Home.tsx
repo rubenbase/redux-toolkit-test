@@ -11,7 +11,13 @@ import { Button } from 'components/atoms/button'
 const Home: FC = () => {
   const location = useLocation()
   const { data, error, isLoading } = useGetPeopleQuery()
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState(() => {
+    // To prevent flash on search view when coming from people
+    const urlParams = new URLSearchParams(location.search)
+    const searchUrlParam = urlParams.get('search')
+    if (searchUrlParam) return searchUrlParam
+    return ''
+  })
 
   const handleSubmitSearch = (search: string) => {
     setSearch(search)
