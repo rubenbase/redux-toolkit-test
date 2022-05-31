@@ -19,8 +19,8 @@ const SearchForm: FC<SearchFormProps> = ({ onSubmitSearch }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="mt-4 sm:mt-0 ml-2 inline-flex items-center relative">
+    <form className="sm:pl-4" onSubmit={handleSubmit}>
+      <div className="mt-4 sm:mt-0 inline-flex items-center relative w-full">
         <Input
           id="searchInput"
           name="searchInput"

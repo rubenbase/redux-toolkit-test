@@ -38,7 +38,7 @@ const Details: FC<DetailsProps> = ({ details = [], title, linksMetadata = [] }) 
       {Boolean(details.length) && (
         <div className="flex flex-wrap mt-4">
           {details.map((detail) => (
-            <div key={detail.name} className="mb-4 text-sm">
+            <div key={detail.name} className="mb-6 text-sm">
               <span className="bg-stone-200 rounded-l-md border px-2 py-2">
                 {detail.name}:
               </span>
