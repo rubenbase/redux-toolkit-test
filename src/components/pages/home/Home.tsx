@@ -22,7 +22,7 @@ const Home: FC = () => {
   const handleSubmitSearch = (search: string) => {
     setSearch(search)
 
-    if (!location.pathname || typeof window === undefined) return
+    if (!location.pathname || typeof window === 'undefined') return
 
     const urlParams = new URLSearchParams(location.search)
     if (!search) urlParams.delete('search')

@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import Container from 'components/atoms/container'
 import { Link } from 'react-router-dom'
-import { Routes } from 'types/routes'
 
 interface NavbarProps {
   logoUrl?: string
